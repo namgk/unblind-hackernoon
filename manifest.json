@@ -1,0 +1,18 @@
+{
+  "name": "Unblind Hackernoon",
+  "version": "1.0",
+  "description": "Remove Hackernoon's eye-sore Blindingly Green",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+      "default_title": "Unblind Hackernoon",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["*://hackernoon.com/*"],
+    "js": ["content.js"]
+  }],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://www.gstatic.com; object-src 'self'"
+}
